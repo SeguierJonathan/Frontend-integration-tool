@@ -1,0 +1,149 @@
+html{
+    font-size: 0.625rem;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1.6rem;
+    color: white;
+    background-color: #111827;
+
+}
+
+header{
+    background-color: #1f2937;
+    margin: 1.5em;
+    padding: 2em;
+    text-align: center;
+    border-radius: 0.5em;
+}
+
+main{
+    margin-top: 1.5em;
+    margin-left: 11.5em;
+}
+
+footer{
+    background-color: #1f2937;
+    margin: 1em;
+    padding: 2em;
+    text-align: center;
+    border-radius: 0.5em;
+}
+
+* {
+  /*-user-drag: none;        /* Pour Safari */
+  -webkit-user-drag: none; /* Pour Chrome */
+  user-select: none;       /* Empêche aussi la sélection de texte */
+}
+
+aside.menu_balise{
+    background-color: #1f2937;
+    margin-left: 1.5em;
+    border-radius: 0.5em;
+    position: fixed;
+    transform: translate(0,-50%);
+    padding: 1em;    
+    top: 50%;
+    left: 0;
+    width: 8em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+aside.instuction{
+    display: flex;
+    justify-content: space-between;
+    background-color: #1f2937;
+    border-radius: 0.5em;
+    padding:1em;
+    margin: 1em;
+}
+
+
+button{
+    all:unset;
+    background-color: #374151;
+    cursor:pointer;
+    padding: 0.5em;
+    border-radius: 0.25em;
+}
+
+#load_button{
+    background-color: #2563eb;
+}
+
+#load_button:hover{
+    background-color: #18439e;
+}
+
+#load_button:active{
+    background-color: #8fb0f5;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
+}
+
+h3{
+    font-size: 2rem;
+    color: #374151;
+}
+
+
+
+p{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#content{
+    background-color: #1f2937;
+    border-radius: 0.5em;
+    padding:1em;
+    margin: 1.5em;
+}
+
+#fileInput{
+    display: none;
+}
+
+.interaction{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#image_maquette:not([src]), .image_maquette[src=""] {
+    display: none;
+}
+
+#image_maquette{
+    width: 100%;     /* force à prendre toute la largeur du parent */
+    height: auto;    /* garde les proportions */
+}
+
+#text_load_image{
+    margin-top: 250px;        
+}
+
+#work_content:hover{
+    cursor: crosshair;
+}
+
+#work_content{
+    text-align: center;
+    border-radius: 0.5em;
+    background-color: #374151;
+    min-height: 600px;
+    margin: auto;
+    padding: 1em;
+}
+
+
