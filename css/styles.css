@@ -20,8 +20,9 @@ header{
 }
 
 main{
-    margin-top: 1.5em;
-    margin-left: 11.5em;
+    display: flex;
+    gap: 1.5em;
+    margin: 1.5em;
 }
 
 footer{
@@ -40,12 +41,8 @@ footer{
 
 aside.menu_balise{
     background-color: #1f2937;
-    margin-left: 1.5em;
     border-radius: 0.5em;
-    position: fixed;
     padding: 1em;    
-    top: 225px;
-    left: 0;
     width: 8em;
     display: flex;
     flex-direction: column;
@@ -106,7 +103,7 @@ p{
     background-color: #1f2937;
     border-radius: 0.5em;
     padding:1em;
-    margin: 1.5em;
+    width: 100%;
 }
 
 #fileInput{
@@ -149,7 +146,7 @@ p{
     position:relative;
     border-radius: 0.5em;
     background-color: #374151;
-    min-height: 600px;
+    min-height: 735px;
     margin: auto;
     padding: 2em;
 }
@@ -323,4 +320,4 @@ background: rgba(47, 79, 79, 0.1);
 .box-khaki{
 border: 2px solid #F0E68C;
 background: rgba(240, 230, 140, 0.1);
-}s
+}
