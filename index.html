@@ -12,15 +12,21 @@
 </head>
 <body>
     <header>
-        <h1>content instruction</h1>
-        <aside class="instuction">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad deserunt sint error ea illum. Aliquam sequi voluptatum illum eos magni provident. Saepe porro nesciunt maiores labore minima facilis, similique veritatis.</p>
-            <div class="interaction">
-                <button id="load_button">Choisir une image</button>
-                <button id="clear_button">Effacer l'image</button>
-                <input type="file" id="fileInput" accept="image/*">
-            </div>
-        </aside>
+        <h1>Maquettage HTML</h1>
+        <div>
+            <h3>Instructions :</h3>
+            <ol>
+                <li> Chargez une image de votre maquette ou design</li>
+                <li> Sélectionnez une balise HTML dans le panneau de gauche</li>
+                <li> Cliquez et glissez sur l'image pour dessiner une zone</li>
+            </ol>
+        </div>
+        <div class="interaction">
+            <button id="load_button">Choisir une image</button>
+            <button id="clear_button">Effacer l'image</button>
+            <button id="clear_balise" onclick="deleteAllDrawElement()">Effacer les balises</button>
+            <input type="file" id="fileInput" accept="image/*">
+        </div>
     </header>
     <main>
         
@@ -30,30 +36,40 @@
                 <p id="text_load_image">Chargez une image pour commencer</p>
                 <img id="image_maquette" src="" alt="">
             </div>
-        <aside>
-
         </aside>
     </main>
 
 
     <aside class="menu_balise">
         <h2>Balises</h2>
-        <button>&lt;html&gt;</button>
-        <button>&lt;body&gt;</button>
-        <button>&lt;header&gt;</button>
-        <button>&lt;main&gt;</button>
-        <button>&lt;footer&gt;</button>
-        <button>&lt;aside&gt;</button>
-        <button>&lt;article&gt;</button>
-        <button>&lt;div&gt;</button>
-        <button>&lt;h1</h1>&gt;</button>
-        <button>&lt;h2&gt;</button>
-        <button>&lt;h3&gt;</button>
-        <button>&lt;h4&gt;</button>
-        <button>&lt;h5&gt;</button>
-        <button>&lt;h6&gt;</button>
-        <button>&lt;div&gt;</button>
-    </aside>   
+
+        <button class="select1 btn-red active" onclick="selectBtn(this)">html</button>
+        <button class="select1 btn-lime" onclick="selectBtn(this)">body</button>
+        <button class="select1 btn-blue" onclick="selectBtn(this)">header</button>
+        <button class="select1 btn-yellow" onclick="selectBtn(this)">main</button>
+        <button class="select1 btn-magenta" onclick="selectBtn(this)">footer</button>
+        <button class="select1 btn-cyan" onclick="selectBtn(this)">aside</button>
+        <button class="select1 btn-orange" onclick="selectBtn(this)">article</button>
+        <button class="select1 btn-purple" onclick="selectBtn(this)">div</button>
+        <button class="select1 btn-green" onclick="selectBtn(this)">h1</h1></button>
+        <button class="select1 btn-navy" onclick="selectBtn(this)">h2</button>
+        <button class="select1 btn-maroon" onclick="selectBtn(this)">h3</button>
+        <button class="select1 btn-olive" onclick="selectBtn(this)">h4</button>
+        <button class="select1 btn-teal" onclick="selectBtn(this)">h5</button>
+        <button class="select1 btn-silver" onclick="selectBtn(this)">h6</button>
+        <button class="select1 btn-gold" onclick="selectBtn(this)">p</button>
+        <button class="select1 btn-deeppink" onclick="selectBtn(this)">b</button>
+        <button class="select1 btn-indigo" onclick="selectBtn(this)">em</button>
+        <button class="select1 btn-saddlebrown" onclick="selectBtn(this)">strong</button>
+        <button class="select1 btn-tomato" onclick="selectBtn(this)">i</button>
+        <button class="select1 btn-turquoise" onclick="selectBtn(this)">s</button>
+    </aside>
+
+    <template id="drawbox">
+        <div class="box">
+            <p class="vignette">html</p>            
+        </div>
+    </template>
     
 </body>
 </html>
