@@ -159,6 +159,127 @@ p{
     position:absolute;
 }
 
+.box-red{
+border: 4px solid #FF0000;
+background: rgba(255, 0, 0, 0.1);
+}
+.box-lime{
+border: 4px solid #00FF00;
+background: rgba(0, 255, 0, 0.1);
+}
+.box-blue{
+border: 4px solid #0000FF;
+background: rgba(0, 0, 255, 0.1);
+}
+.box-yellow{
+border: 4px solid #FFFF00;
+background: rgba(255, 255, 0, 0.1);
+}
+.box-magenta{
+border: 4px solid #FF00FF;
+background: rgba(255, 0, 255, 0.1);
+}
+.box-cyan{
+border: 4px solid #00FFFF;
+background: rgba(0, 255, 255, 0.1);
+}
+.box-orange{
+border: 4px solid #FFA500;
+background: rgba(255, 165, 0, 0.1);
+}
+.box-purple{
+border: 4px solid #800080;
+background: rgba(128, 0, 128, 0.1);
+}
+.box-green{
+border: 4px solid #008000;
+background: rgba(0, 128, 0, 0.1);
+}
+.box-navy{
+border: 4px solid #000080;
+background: rgba(0, 0, 128, 0.1);
+}
+.box-maroon{
+border: 4px solid #800000;
+background: rgba(128, 0, 0, 0.1);
+}
+.box-olive{
+border: 4px solid #808000;
+background: rgba(128, 128, 0, 0.1);
+}
+.box-teal{
+border: 4px solid #008080;
+background: rgba(0, 128, 128, 0.1);
+}
+.box-silver{
+border: 4px solid #C0C0C0;
+background: rgba(192, 192, 192, 0.1);
+}
+.box-gold{
+border: 4px solid #FFD700;
+background: rgba(255, 215, 0, 0.1);
+}
+.box-deeppink{
+border: 4px solid #FF1493;
+background: rgba(255, 20, 147, 0.1);
+}
+.box-indigo{
+border: 4px solid #4B0082;
+background: rgba(75, 0, 130, 0.1);
+}
+.box-saddlebrown{
+border: 4px solid #8B4513;
+background: rgba(139, 69, 19, 0.1);
+}
+.box-tomato{
+border: 4px solid #FF6347;
+background: rgba(255, 99, 71, 0.1);
+}
+.box-turquoise{
+border: 4px solid #40E0D0;
+background: rgba(64, 224, 208, 0.1);
+}
+.box-mediumpurple{
+border: 4px solid #9370DB;
+background: rgba(147, 112, 219, 0.1);
+}
+.box-limegreen{
+border: 4px solid #32CD32;
+background: rgba(50, 205, 50, 0.1);
+}
+.box-darkorange{
+border: 4px solid #FF8C00;
+background: rgba(255, 140, 0, 0.1);
+}
+.box-dodgerblue{
+border: 4px solid #1E90FF;
+background: rgba(30, 144, 255, 0.1);
+}
+.box-crimson{
+border: 4px solid #DC143C;
+background: rgba(220, 20, 60, 0.1);
+}
+.box-darkturquoise{
+border: 4px solid #00CED1;
+background: rgba(0, 206, 209, 0.1);
+}
+.box-greenyellow{
+border: 4px solid #ADFF2F;
+background: rgba(173, 255, 47, 0.1);
+}
+.box-hotpink{
+border: 4px solid #FF69B4;
+background: rgba(255, 105, 180, 0.1);
+}
+.box-darkslategray{
+border: 4px solid #2F4F4F;
+background: rgba(47, 79, 79, 0.1);
+}
+.box-khaki{
+border: 4px solid #F0E68C;
+background: rgba(240, 230, 140, 0.1);
+}
+
 .btn-red.active { background: #FF0000; }
 .btn-lime.active { background: #00FF00; }
 .btn-blue.active { background: #0000FF; }
@@ -201,123 +322,4 @@ p{
     padding:0.25em;
 }
 
-.box-red{
-border: 2px solid #FF0000;
-background: rgba(255, 0, 0, 0.1);
-}
-.box-lime{
-border: 2px solid #00FF00;
-background: rgba(0, 255, 0, 0.1);
-}
-.box-blue{
-border: 2px solid #0000FF;
-background: rgba(0, 0, 255, 0.1);
-}
-.box-yellow{
-border: 2px solid #FFFF00;
-background: rgba(255, 255, 0, 0.1);
-}
-.box-magenta{
-border: 2px solid #FF00FF;
-background: rgba(255, 0, 255, 0.1);
-}
-.box-cyan{
-border: 2px solid #00FFFF;
-background: rgba(0, 255, 255, 0.1);
-}
-.box-orange{
-border: 2px solid #FFA500;
-background: rgba(255, 165, 0, 0.1);
-}
-.box-purple{
-border: 2px solid #800080;
-background: rgba(128, 0, 128, 0.1);
-}
-.box-green{
-border: 2px solid #008000;
-background: rgba(0, 128, 0, 0.1);
-}
-.box-navy{
-border: 2px solid #000080;
-background: rgba(0, 0, 128, 0.1);
-}
-.box-maroon{
-border: 2px solid #800000;
-background: rgba(128, 0, 0, 0.1);
-}
-.box-olive{
-border: 2px solid #808000;
-background: rgba(128, 128, 0, 0.1);
-}
-.box-teal{
-border: 2px solid #008080;
-background: rgba(0, 128, 128, 0.1);
-}
-.box-silver{
-border: 2px solid #C0C0C0;
-background: rgba(192, 192, 192, 0.1);
-}
-.box-gold{
-border: 2px solid #FFD700;
-background: rgba(255, 215, 0, 0.1);
-}
-.box-deeppink{
-border: 2px solid #FF1493;
-background: rgba(255, 20, 147, 0.1);
-}
-.box-indigo{
-border: 2px solid #4B0082;
-background: rgba(75, 0, 130, 0.1);
-}
-.box-saddlebrown{
-border: 2px solid #8B4513;
-background: rgba(139, 69, 19, 0.1);
-}
-.box-tomato{
-border: 2px solid #FF6347;
-background: rgba(255, 99, 71, 0.1);
-}
-.box-turquoise{
-border: 2px solid #40E0D0;
-background: rgba(64, 224, 208, 0.1);
-}
-.box-mediumpurple{
-border: 2px solid #9370DB;
-background: rgba(147, 112, 219, 0.1);
-}
-.box-limegreen{
-border: 2px solid #32CD32;
-background: rgba(50, 205, 50, 0.1);
-}
-.box-darkorange{
-border: 2px solid #FF8C00;
-background: rgba(255, 140, 0, 0.1);
-}
-.box-dodgerblue{
-border: 2px solid #1E90FF;
-background: rgba(30, 144, 255, 0.1);
-}
-.box-crimson{
-border: 2px solid #DC143C;
-background: rgba(220, 20, 60, 0.1);
-}
-.box-darkturquoise{
-border: 2px solid #00CED1;
-background: rgba(0, 206, 209, 0.1);
-}
-.box-greenyellow{
-border: 2px solid #ADFF2F;
-background: rgba(173, 255, 47, 0.1);
-}
-.box-hotpink{
-border: 2px solid #FF69B4;
-background: rgba(255, 105, 180, 0.1);
-}
-.box-darkslategray{
-border: 2px solid #2F4F4F;
-background: rgba(47, 79, 79, 0.1);
-}
-.box-khaki{
-border: 2px solid #F0E68C;
-background: rgba(240, 230, 140, 0.1);
-}
+
