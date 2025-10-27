@@ -131,6 +131,30 @@ p{
     background-color: #8fb0f5;
 }
 
+#clear_button{
+    background-color: #25eb63;
+}
+
+#clear_button:hover{
+    background-color: #189e43;
+}
+
+#clear_button:active{
+    background-color: #8ff5b0;
+}
+
+#clear_balise{
+    background-color: #eb2563;
+}
+
+#clear_balise:hover{
+    background-color: #9e1843;
+}
+
+#clear_balise:active{
+    background-color: #f58fb0;
+}
+
 #text_load_image{
     position:absolute;
     top: 50%;

@@ -22,27 +22,47 @@
             text_load_image.style.display = "block";
         })
 
+        document.addEventListener("dblclick", (e) => {
+            console.log(document.elementFromPoint(e.clientX,e.clientY));
+        })
+
         work_content.addEventListener("mousedown", (e) => {
   
-            const rect = work_content.getBoundingClientRect();
+            switch(e.button) {
+                case 0:
+                    const rect = work_content.getBoundingClientRect();
 
-            drawing = true;
-            startX = e.clientX - rect.left;
-            startY = e.clientY - rect.top;
+                    drawing = true;
+                    startX = e.clientX - rect.left;
+                    startY = e.clientY - rect.top;
+                    
+                    const template = document.getElementById("drawbox");
+                    drawTempFragment = template.content.cloneNode(true);
+                
+
+                    drawTemp = drawTempFragment.querySelector(".box");
+                    const vignette = drawTempFragment.querySelector(".vignette");
+
+                    vignette.textContent = activeBalise.text;
+                    
+                    drawTemp.classList.add('box-' + activeBalise.color)
+                    drawTemp.style.top = startY + "px";
+                    drawTemp.style.left = startX + "px";
+                    work_content.appendChild(drawTemp)
+                    break;
+                case 1:
+
+                    const element = document.elementFromPoint(e.clientX,e.clientY);
+                    
+
+                    if (element.classList.contains("box")){
+                        element.remove();
+                    };
+                    break;
             
-            const template = document.getElementById("drawbox");
-            drawTempFragment = template.content.cloneNode(true);
-        
+                }
 
-            drawTemp = drawTempFragment.querySelector(".box");
-            const vignette = drawTempFragment.querySelector(".vignette");
-
-            vignette.textContent = activeBalise.text;
             
-            drawTemp.classList.add('box-' + activeBalise.color)
-            drawTemp.style.top = startY + "px";
-            drawTemp.style.left = startX + "px";
-            work_content.appendChild(drawTemp)
         });
 
         work_content.addEventListener("mousemove", (e) =>{
