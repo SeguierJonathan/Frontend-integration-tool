@@ -1,10 +1,8 @@
         
         //recuperation des élements utiles
-        const load_button = document.getElementById("load_button");
         const fileInput = document.getElementById("fileInput");
         const image_maquette = document.getElementById("image_maquette");
         const text_load_image = document.getElementById("text_load_image")
-        const clear_button = document.getElementById("clear_button");
         const work_content = document.getElementById("work_content");
 
         //declaration des variables utiles
@@ -14,13 +12,6 @@
         let drawItems = [];
         let nextId = 0;
         let activeBalise = {color: 'red',text:'html'};
-
-
-        load_button.addEventListener('click',() => {fileInput.click()});
-        clear_button.addEventListener('click',()=> {
-            image_maquette.src = "";
-            text_load_image.style.display = "block";
-        })
 
         document.addEventListener("dblclick", (e) => {
             console.log(document.elementFromPoint(e.clientX,e.clientY));
@@ -132,6 +123,14 @@
             })            
         }
 
+
+        function clearImage(){
+            image_maquette.src = "";
+            text_load_image.style.display = "block";
+        }
+
+        function loadImage(){fileInput.click()}
+
         function deleteAllDrawElement(){
             
             drawItems.forEach(e=>{
@@ -142,7 +141,7 @@
 
         function selectBtn(btn){
 
-            const buttons = document.querySelectorAll('.select1');
+            const buttons = document.querySelectorAll('.btn-group-1');
 
             buttons.forEach(b => {
                 b.classList.remove('active');
@@ -150,8 +149,7 @@
 
             btn.classList.add('active');
             
-            const classes = btn.className.split(' ');
-            const colorclass = classes.find(c => c.startsWith('btn-'));
+            const colorclass = btn.classList[1];
             activeBalise.color = colorclass.replace('btn-','')
             activeBalise.text = btn.textContent;
 

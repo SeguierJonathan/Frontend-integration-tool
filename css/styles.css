@@ -67,10 +67,6 @@ button{
     font-weight: normal;
 }
 
-button.active{
-    font-weight: bold;
-}
-
 h1{
     font-size: 3rem;
 }
@@ -117,42 +113,6 @@ p{
 #image_maquette{
     width: 100%;     
     height: auto;
-}
-
-#load_button{
-    background-color: #2563eb;
-}
-
-#load_button:hover{
-    background-color: #18439e;
-}
-
-#load_button:active{
-    background-color: #8fb0f5;
-}
-
-#clear_button{
-    background-color: #25eb63;
-}
-
-#clear_button:hover{
-    background-color: #189e43;
-}
-
-#clear_button:active{
-    background-color: #8ff5b0;
-}
-
-#clear_balise{
-    background-color: #eb2563;
-}
-
-#clear_balise:hover{
-    background-color: #9e1843;
-}
-
-#clear_balise:active{
-    background-color: #f58fb0;
 }
 
 #text_load_image{
@@ -304,42 +264,80 @@ border: 4px solid #F0E68C;
 background: rgba(240, 230, 140, 0.1);
 }
 
-.btn-red.active { background: #FF0000; }
-.btn-lime.active { background: #00FF00; }
-.btn-blue.active { background: #0000FF; }
-.btn-yellow.active { background: #FFFF00; }
-.btn-magenta.active { background: #FF00FF; }
-.btn-cyan.active { background: #00FFFF; }
-.btn-orange.active { background: #FFA500; }
-.btn-purple.active { background: #800080; }
-.btn-green.active { background: #008000; }
-.btn-navy.active { background: #000080; }
-.btn-maroon.active { background: #800000; }
-.btn-olive.active { background: #808000; }
-.btn-teal.active { background: #008080; }
-.btn-silver.active { background: #C0C0C0; }
-.btn-gold.active { background: #FFD700; }
-.btn-deeppink.active { background: #FF1493; }
-.btn-indigo.active { background: #4B0082; }
-.btn-saddlebrown.active { background: #8B4513; }
-.btn-tomato.active { background: #FF6347; }
-.btn-turquoise.active { background: #40E0D0; }
-.btn-mediumpurple.active { background: #9370DB; }
-.btn-limegreen.active { background: #32CD32; }
-.btn-darkorange.active { background: #FF8C00; }
-.btn-dodgerblue.active { background: #1E90FF; }
-.btn-crimson.active { background: #DC143C; }
-.btn-darkturquoise.active { background: #00CED1; }
-.btn-greenyellow.active { background: #ADFF2F; }
-.btn-hotpink.active { background: #FF69B4; }
-.btn-darkslategray.active { background: #2F4F4F; }
-.btn-khaki.active { background: #F0E68C; }
+
+.btn-red.active { background: #FF0000; font-weight: bold;}
+.btn-lime.active { background: #00FF00; font-weight: bold;}
+.btn-blue.active { background: #0000FF; font-weight: bold;}
+.btn-yellow.active { background: #FFFF00; font-weight: bold;}
+.btn-magenta.active { background: #FF00FF; font-weight: bold;}
+.btn-cyan.active { background: #00FFFF; font-weight: bold;}
+.btn-orange.active { background: #FFA500; font-weight: bold;}
+.btn-purple.active { background: #800080; font-weight: bold;}
+.btn-green.active { background: #008000; font-weight: bold;}
+.btn-navy.active { background: #000080; font-weight: bold;}
+.btn-maroon.active { background: #800000; font-weight: bold;}
+.btn-olive.active { background: #808000; font-weight: bold;}
+.btn-teal.active { background: #008080; font-weight: bold;}
+.btn-silver.active { background: #C0C0C0; font-weight: bold;}
+.btn-gold.active { background: #FFD700; font-weight: bold;}
+.btn-deeppink.active { background: #FF1493; font-weight: bold;}
+.btn-indigo.active { background: #4B0082; font-weight: bold;}
+.btn-saddlebrown.active { background: #8B4513; font-weight: bold;}
+.btn-tomato.active { background: #FF6347; font-weight: bold;}
+.btn-turquoise.active { background: #40E0D0; font-weight: bold;}
+.btn-mediumpurple.active { background: #9370DB; font-weight: bold;}
+.btn-limegreen.active { background: #32CD32; font-weight: bold;}
+.btn-darkorange.active { background: #FF8C00; font-weight: bold;}
+.btn-dodgerblue.active { background: #1E90FF; font-weight: bold;}
+.btn-crimson.active { background: #DC143C; font-weight: bold;}
+.btn-darkturquoise.active { background: #00CED1; font-weight: bold;}
+.btn-greenyellow.active { background: #ADFF2F; font-weight: bold;}
+.btn-hotpink.active { background: #FF69B4; font-weight: bold;}
+.btn-darkslategray.active { background: #2F4F4F; font-weight: bold;}
+.btn-khaki.active { background: #F0E68C; font-weight: bold;}
+
+.clear-balise{
+    background-color: #eb2563;
+}
+
+.clear-balise:hover{
+    background-color: #9e1843;
+}
+
+.clear-balise:active{
+    background-color: #f58fb0;
+}
+
+.clear-image{
+    background-color: #25eb63;
+}
+
+.clear-image:hover{
+    background-color: #189e43;
+}
+
+.clear-image:active{
+    background-color: #8ff5b0;
+}
 
 .interaction{
     display: flex;
     flex-direction: column;
     gap: 0.5em;
 }
+
+.load-image{
+    background-color: #2563eb;
+}
+
+.load-image:hover{
+    background-color: #18439e;
+}
+
+.load-image:active{
+    background-color: #8fb0f5;
+}
+
 
 .vignette{
     margin: 0;    
