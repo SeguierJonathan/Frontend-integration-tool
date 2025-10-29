@@ -21,6 +21,7 @@ header{
 
 main{
     display: flex;
+    align-items: flex-start;
     gap: 1.5em;
     margin: 1.5em;
 }
@@ -39,7 +40,7 @@ footer{
   user-select: none;       /* Empêche aussi la sélection de texte */
 }
 
-aside.menu_balise{
+.main__menu{
     background-color: #1f2937;
     border-radius: 0.5em;
     padding: 1em;    
@@ -90,6 +91,57 @@ p{
     margin-top: 1em;
     margin-bottom: 1em;
 }
+
+input[type="radio"]{
+    appearance: none;
+    width: 32px;
+    height: 32px;
+    border: 4px solid #ddd;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+}
+
+
+input[type="radio"]:checked {
+    border-width: 16px;
+}
+
+
+input[type="radio"].red { border-color: red; }
+input[type="radio"].lime { border-color: lime; }
+input[type="radio"].blue { border-color: blue; }
+input[type="radio"].yellow { border-color: yellow; }
+input[type="radio"].magenta { border-color: magenta; }
+input[type="radio"].cyan { border-color: cyan; }
+input[type="radio"].orange { border-color: orange; }
+input[type="radio"].purple { border-color: purple; }
+input[type="radio"].green { border-color: green; }
+input[type="radio"].navy { border-color: navy; }
+input[type="radio"].maroon { border-color: maroon; }
+input[type="radio"].olive { border-color: olive; }
+input[type="radio"].teal { border-color: teal; }
+input[type="radio"].silver { border-color: silver; }
+input[type="radio"].gold { border-color: gold; }
+input[type="radio"].deeppink { border-color: #FF1493; }
+input[type="radio"].indigo { border-color: #4B0082; }
+input[type="radio"].saddlebrown { border-color: #8B4513; }
+input[type="radio"].tomato { border-color: #FF6347; }
+input[type="radio"].turquoise { border-color: #40E0D0; }
+input[type="radio"].mediumpurple { border-color: #9370DB; }
+input[type="radio"].limegreen { border-color: #32CD32; }
+input[type="radio"].darkorange { border-color: #FF8C00; }
+input[type="radio"].dodgerblue { border-color: #1E90FF; }
+input[type="radio"].crimson { border-color: #DC143C; }
+input[type="radio"].darkturquoise { border-color: #00CED1; }
+input[type="radio"].greenyellow { border-color: #ADFF2F; }
+input[type="radio"].hotpink { border-color: #FF69B4; }
+input[type="radio"].darkslategray { border-color: #2F4F4F; }
+input[type="radio"].khaki { border-color: #F0E68C; }
+
+
 
 /*-------------------------*/
 /*-----------id------------*/

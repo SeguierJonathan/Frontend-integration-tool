@@ -21,12 +21,20 @@
   
             switch(e.button) {
                 case 0:
+                    
+                    //récupère la zone de dessin
                     const rect = work_content.getBoundingClientRect();
 
+                    //récupère la radio checked
+                    const select = document.querySelector('input[name="color"]:checked');
+
+                    //active le dessin d'une box 
                     drawing = true;
+
                     startX = e.clientX - rect.left;
                     startY = e.clientY - rect.top;
                     
+                    //récupère le template pour crée un enfant
                     const template = document.getElementById("drawbox");
                     drawTempFragment = template.content.cloneNode(true);
                 
@@ -36,7 +44,7 @@
 
                     vignette.textContent = activeBalise.text;
                     
-                    drawTemp.classList.add('box-' + activeBalise.color)
+                    drawTemp.classList.add('box-' + select.value)
                     drawTemp.style.top = startY + "px";
                     drawTemp.style.left = startX + "px";
                     work_content.appendChild(drawTemp)
@@ -44,7 +52,6 @@
                 case 1:
 
                     const element = document.elementFromPoint(e.clientX,e.clientY);
-                    
 
                     if (element.classList.contains("box")){
                         element.remove();
@@ -88,6 +95,7 @@
         work_content.addEventListener("mouseup", (e) => {
 
             if (!drawing) return;
+            
             addDrawElement(drawTemp);
             drawing = false;
             drawtemp = null;
