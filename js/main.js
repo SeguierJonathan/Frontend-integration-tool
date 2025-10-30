@@ -8,10 +8,11 @@
         //declaration des variables utiles
         let startX = 0, startY = 0;
         let drawing = false;
-        let drawTemp = null;
-        let drawItems = [];
+        let templateClone= null;
+        let drawBox = null;
+        let drawBoxs = [];
         let nextId = 0;
-        let activeBalise = {color: 'red',text:'html'};
+        let activeBalise = {color: 'red',text: 'html'};
 
         document.addEventListener("dblclick", (e) => {
             console.log(document.elementFromPoint(e.clientX,e.clientY));
@@ -36,18 +37,18 @@
                     
                     //récupère le template pour crée un enfant
                     const template = document.getElementById("drawbox");
-                    drawTempFragment = template.content.cloneNode(true);
+                    templateClone = template.content.cloneNode(true);
                 
 
-                    drawTemp = drawTempFragment.querySelector(".box");
-                    const vignette = drawTempFragment.querySelector(".vignette");
-
-                    vignette.textContent = activeBalise.text;
+                    drawBox = templateClone.querySelector(".box");
                     
-                    drawTemp.classList.add('box-' + select.value)
-                    drawTemp.style.top = startY + "px";
-                    drawTemp.style.left = startX + "px";
-                    work_content.appendChild(drawTemp)
+                    //const vignette = templateClone.querySelector(".vignette");
+                    //vignette.textContent = activeBalise.text;
+                    
+                    drawBox.classList.add('box-' + select.value)
+                    drawBox.style.top = startY + "px";
+                    drawBox.style.left = startX + "px";
+                    work_content.appendChild(drawBox)
                     break;
                 case 1:
 
@@ -64,41 +65,15 @@
         });
 
         work_content.addEventListener("mousemove", (e) =>{
-
-            if (!drawing || !drawTemp) return;
-
-            const rect = work_content.getBoundingClientRect();
-
-            currentX = e.clientX - rect.left;
-            currentY = e.clientY - rect.top;
-
-            const top = Math.min(startY, currentY);
-            const left = Math.min(startX, currentX);
-            const width = Math.abs(startX - currentX)
-            const height = Math.abs(startY - currentY);
-
-            drawTemp.style.top = top + "px";
-            drawTemp.style.left = left + "px";
-            drawTemp.style.width = width + "px";
-            drawTemp.style.height = height + "px";
-
+            createBox(e);
         })        
 
         work_content.addEventListener("mouseleave", (e) => {
-
-            if (!drawing) return;
-            addDrawElement(drawTemp);
-            drawing = false;
-            drawtemp = null;
+            leaveBox();
         });
 
         work_content.addEventListener("mouseup", (e) => {
-
-            if (!drawing) return;
-            
-            addDrawElement(drawTemp);
-            drawing = false;
-            drawtemp = null;
+            leaveBox();
         });
 
         fileInput.addEventListener('change',(event)=>{
@@ -118,16 +93,71 @@
         });
 
 
+        function createBox(e){
+            if (!drawing || !drawBox) return;
+
+            const rect = work_content.getBoundingClientRect();
+
+            currentX = e.clientX - rect.left;
+            currentY = e.clientY - rect.top;
+
+            const top = Math.min(startY, currentY);
+            const left = Math.min(startX, currentX);
+            const width = Math.abs(startX - currentX)
+            const height = Math.abs(startY - currentY);
+
+            drawBox.style.top = top + "px";
+            drawBox.style.left = left + "px";
+            drawBox.style.width = width + "px";
+            drawBox.style.height = height + "px";
+
+        }
+
+        function updateBox(){
+
+        }
+
+        function leaveBox(){
+          if (!drawing) return;
+
+            //active et focus sur input
+            const input = drawBox.querySelector('input[name="vignette"]');
+            const vignette = drawBox.querySelector(".vignette");
+            
+            console.log(input)
+
+            input.classList.add('active');
+            input.focus();
+
+            //évent aprés perte du focus
+            input.addEventListener('blur',(e) => {
+               const text = input.value;
+               input.classList.remove('active');
+               vignette.textContent = text;
+               vignette.classList.add('active');
+            })
+
+            input.addEventListener('keydown', (e)=>{
+                if(e.key === 'Entre' || e.key === 'Escape'){
+                    input.blur();
+                }
+            })
+
+            addDrawElement(drawBox);
+            drawing = false;
+            drawBox = null;
+            templateClone = null;
+        }
 
         function addDrawElement(element){
             const id = ++nextId;
-            drawItems.push({
+            drawBoxs.push({
                 id: id,
                 left: parseFloat(element.style.left),
                 top: parseFloat(element.style.top),
                 width: parseFloat(element.style.width),
                 height: parseFloat(element.style.height),
-                element: drawTemp
+                element: drawBox
             })            
         }
 
@@ -141,7 +171,7 @@
 
         function deleteAllDrawElement(){
             
-            drawItems.forEach(e=>{
+            drawBoxs.forEach(e=>{
                 e.element.remove();
             })
           

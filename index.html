@@ -23,9 +23,9 @@
             </ol>
         </div>
         <div class="interaction">
-            <button class="load-image" onclick="loadImage()">Choisir une image</button>
-            <button class="clear-image" onclick="clearImage()">Effacer l'image</button>
-            <button class="clear-balise" onclick="deleteAllDrawElement()">Effacer les balises</button>
+            <button class="btn--load-image" onclick="loadImage()">Choisir une image</button>
+            <button class="btn--clear-image" onclick="clearImage()">Effacer l'image</button>
+            <button class="btn--clear-balise" onclick="deleteAllDrawElement()">Effacer les balises</button>
             <input type="file" id="fileInput" accept="image/*">
         </div>
     </header>
@@ -79,7 +79,7 @@
 
     <template id="drawbox">
         <div class="box">
-            <input type="text">
+            <input type="text" name="vignette" maxlength="10">
             <p class="vignette"></p>            
         </div>
     </template>

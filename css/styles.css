@@ -15,7 +15,7 @@ header{
     justify-content: space-between;
     background-color: #1f2937;
     margin: 1.5em;
-    padding: 2em;
+    padding: 1em;
     border-radius: 0.5em;
 }
 
@@ -38,16 +38,6 @@ footer{
   /*-user-drag: none;        /* Pour Safari */
   -webkit-user-drag: none; /* Pour Chrome */
   user-select: none;       /* Empêche aussi la sélection de texte */
-}
-
-.main__menu{
-    background-color: #1f2937;
-    border-radius: 0.5em;
-    padding: 1em;    
-    width: 8em;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
 }
 
 aside.instuction{
@@ -92,6 +82,11 @@ p{
     margin-bottom: 1em;
 }
 
+input[type="text"]{
+    width: 75px;
+    font-size: 2rem;
+}
+
 input[type="radio"]{
     appearance: none;
     width: 32px;
@@ -111,36 +106,43 @@ input[type="radio"]:checked {
 
 
 input[type="radio"].red { border-color: red; }
+input[type="radio"].crimson { border-color: #DC143C; }
 input[type="radio"].lime { border-color: lime; }
+input[type="radio"].greenyellow { border-color: #ADFF2F; }
 input[type="radio"].blue { border-color: blue; }
+input[type="radio"].navy { border-color: navy; }
 input[type="radio"].yellow { border-color: yellow; }
+input[type="radio"].gold { border-color: gold; }
 input[type="radio"].magenta { border-color: magenta; }
+input[type="radio"].purple { border-color: purple; }
 input[type="radio"].cyan { border-color: cyan; }
 input[type="radio"].orange { border-color: orange; }
-input[type="radio"].purple { border-color: purple; }
 input[type="radio"].green { border-color: green; }
-input[type="radio"].navy { border-color: navy; }
 input[type="radio"].maroon { border-color: maroon; }
 input[type="radio"].olive { border-color: olive; }
 input[type="radio"].teal { border-color: teal; }
 input[type="radio"].silver { border-color: silver; }
-input[type="radio"].gold { border-color: gold; }
 input[type="radio"].deeppink { border-color: #FF1493; }
+input[type="radio"].hotpink { border-color: #FF69B4; }
 input[type="radio"].indigo { border-color: #4B0082; }
 input[type="radio"].saddlebrown { border-color: #8B4513; }
 input[type="radio"].tomato { border-color: #FF6347; }
 input[type="radio"].turquoise { border-color: #40E0D0; }
 input[type="radio"].mediumpurple { border-color: #9370DB; }
 input[type="radio"].limegreen { border-color: #32CD32; }
-input[type="radio"].darkorange { border-color: #FF8C00; }
+input[type="radio"].darkorange { border-color: #df7a00; }
 input[type="radio"].dodgerblue { border-color: #1E90FF; }
-input[type="radio"].crimson { border-color: #DC143C; }
 input[type="radio"].darkturquoise { border-color: #00CED1; }
-input[type="radio"].greenyellow { border-color: #ADFF2F; }
-input[type="radio"].hotpink { border-color: #FF69B4; }
 input[type="radio"].darkslategray { border-color: #2F4F4F; }
 input[type="radio"].khaki { border-color: #F0E68C; }
 
+input[type="text"]{
+    display:none;
+}
+
+input[type="text"].active{
+    display:inline;
+}
 
 
 /*-------------------------*/
@@ -317,58 +319,28 @@ background: rgba(240, 230, 140, 0.1);
 }
 
 
-.btn-red.active { background: #FF0000; font-weight: bold;}
-.btn-lime.active { background: #00FF00; font-weight: bold;}
-.btn-blue.active { background: #0000FF; font-weight: bold;}
-.btn-yellow.active { background: #FFFF00; font-weight: bold;}
-.btn-magenta.active { background: #FF00FF; font-weight: bold;}
-.btn-cyan.active { background: #00FFFF; font-weight: bold;}
-.btn-orange.active { background: #FFA500; font-weight: bold;}
-.btn-purple.active { background: #800080; font-weight: bold;}
-.btn-green.active { background: #008000; font-weight: bold;}
-.btn-navy.active { background: #000080; font-weight: bold;}
-.btn-maroon.active { background: #800000; font-weight: bold;}
-.btn-olive.active { background: #808000; font-weight: bold;}
-.btn-teal.active { background: #008080; font-weight: bold;}
-.btn-silver.active { background: #C0C0C0; font-weight: bold;}
-.btn-gold.active { background: #FFD700; font-weight: bold;}
-.btn-deeppink.active { background: #FF1493; font-weight: bold;}
-.btn-indigo.active { background: #4B0082; font-weight: bold;}
-.btn-saddlebrown.active { background: #8B4513; font-weight: bold;}
-.btn-tomato.active { background: #FF6347; font-weight: bold;}
-.btn-turquoise.active { background: #40E0D0; font-weight: bold;}
-.btn-mediumpurple.active { background: #9370DB; font-weight: bold;}
-.btn-limegreen.active { background: #32CD32; font-weight: bold;}
-.btn-darkorange.active { background: #FF8C00; font-weight: bold;}
-.btn-dodgerblue.active { background: #1E90FF; font-weight: bold;}
-.btn-crimson.active { background: #DC143C; font-weight: bold;}
-.btn-darkturquoise.active { background: #00CED1; font-weight: bold;}
-.btn-greenyellow.active { background: #ADFF2F; font-weight: bold;}
-.btn-hotpink.active { background: #FF69B4; font-weight: bold;}
-.btn-darkslategray.active { background: #2F4F4F; font-weight: bold;}
-.btn-khaki.active { background: #F0E68C; font-weight: bold;}
 
-.clear-balise{
+.btn--clear-balise{
     background-color: #eb2563;
 }
 
-.clear-balise:hover{
+.btn--clear-balise:hover{
     background-color: #9e1843;
 }
 
-.clear-balise:active{
+.btn--clear-balise:active{
     background-color: #f58fb0;
 }
 
-.clear-image{
+.btn--clear-image{
     background-color: #25eb63;
 }
 
-.clear-image:hover{
+.btn--clear-image:hover{
     background-color: #189e43;
 }
 
-.clear-image:active{
+.btn--clear-image:active{
     background-color: #8ff5b0;
 }
 
@@ -378,22 +350,48 @@ background: rgba(240, 230, 140, 0.1);
     gap: 0.5em;
 }
 
-.load-image{
+.btn--load-image{
     background-color: #2563eb;
 }
 
-.load-image:hover{
+.btn--load-image:hover{
     background-color: #18439e;
 }
 
-.load-image:active{
+.btn--load-image:active{
     background-color: #8fb0f5;
+}
+
+.main__menu{
+    background-color: #1f2937;
+    border-radius: 0.5em;
+    padding: 1em;    
+    width: 8em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.menu__color{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:0.2em;
 }
 
 
 .vignette{
+    display: none;
+    font-size: 2rem;
     margin: 0;    
     padding:0.25em;
+    text-transform: uppercase;
 }
+
+.vignette.active{
+    display: block;
+}
+
 
 
