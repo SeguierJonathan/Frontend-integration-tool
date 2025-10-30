@@ -138,7 +138,7 @@
             })
 
             input.addEventListener('keydown', (e)=>{
-                if(e.key === 'Entre' || e.key === 'Escape'){
+                if(e.key === 'Enter' || e.key === 'Escape'){
                     input.blur();
                 }
             })
@@ -191,4 +191,24 @@
             activeBalise.color = colorclass.replace('btn-','')
             activeBalise.text = btn.textContent;
 
+        }
+
+        function scaleImage(scale){
+
+            const image = document.getElementById("image_maquette")
+
+            switch(scale.textContent){
+                case "25%":
+                    image.style.width = "25%";
+                break;
+                case "50%":
+                    image.style.width = "50%";
+                break;
+                case "75%":
+                    image.style.width = "75%";
+                break;
+                case "100%":
+                    image.style.width = "100%";
+                break;
+            }
         }
